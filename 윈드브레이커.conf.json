@@ -1,0 +1,293 @@
+{
+    "엘리멘트(스톰)": {
+        "cooltime": 0,
+        "delay": 0,
+        "name": "엘리멘트(스톰)",
+        "red": false,
+        "rem": true,
+        "remain": 200000,
+        "type": "DamageSkill"
+    },
+    "실프스 에이드": {
+        "cooltime": 0,
+        "delay": 0,
+        "name": "실프스 에이드",
+        "red": false,
+        "rem": true,
+        "remain": 200000,
+        "type": "DamageSkill"
+    },
+    "알바트로스 맥시멈": {
+        "cooltime": 0,
+        "delay": 0,
+        "name": "알바트로스 맥시멈",
+        "red": false,
+        "rem": true,
+        "remain": 200000,
+        "type": "DamageSkill"
+    },
+    "샤프 아이즈": {
+        "cooltime": 0,
+        "delay": 660,
+        "name": "샤프 아이즈",
+        "red": false,
+        "rem": true,
+        "remain": 310000,
+        "type": "DamageSkill"
+    },
+    "글로리 오브 가디언즈": {
+        "cooltime": 120000,
+        "delay": 0,
+        "name": "글로리 오브 가디언즈",
+        "red": false,
+        "rem": false,
+        "remain": 60000,
+        "type": "DamageSkill"
+    },
+    "스톰 브링어(버프)": {
+        "cooltime": 0,
+        "delay": 0,
+        "name": "스톰 브링어(버프)",
+        "red": false,
+        "rem": false,
+        "remain": 200000,
+        "type": "DamageSkill"
+    },
+    "트라이플링 윔": {
+        "cooltime": 0,
+        "delay": 0,
+        "name": "트라이플링 윔",
+        "red": false,
+        "rem": false,
+        "_static_skill_modifier": {
+            "0": {
+                "pdamage": 20
+            },
+            "1": {
+                "pdamage_indep": 120,
+                "armor_ignore": 20
+            }
+        },
+        "damage": 313.0,
+        "hit": 1.2,
+        "type": "DamageSkill"
+    },
+    "스톰 브링어": {
+        "cooltime": 0,
+        "delay": 0,
+        "name": "스톰 브링어",
+        "red": false,
+        "rem": false,
+        "_static_skill_modifier": {
+            "0": {},
+            "1": {
+                "crit": 5,
+                "pdamage_indep": 120,
+                "armor_ignore": 20
+            }
+        },
+        "damage": 500,
+        "hit": 0.3,
+        "type": "DamageSkill"
+    },
+    "핀포인트 피어스": {
+        "cooltime": 30000,
+        "delay": 690,
+        "name": "핀포인트 피어스",
+        "red": false,
+        "rem": false,
+        "_static_skill_modifier": {},
+        "damage": 340,
+        "hit": 2,
+        "type": "DamageSkill"
+    },
+    "핀포인트 피어스(버프)": {
+        "cooltime": -1,
+        "delay": 0,
+        "name": "핀포인트 피어스(버프)",
+        "red": false,
+        "rem": false,
+        "remain": 30000,
+        "type": "DamageSkill"
+    },
+    "천공의 노래": {
+        "cooltime": 0,
+        "delay": 120,
+        "name": "천공의 노래",
+        "red": false,
+        "rem": false,
+        "_static_skill_modifier": {
+            "0": {
+                "pdamage": 92.79999999999998,
+                "boss_pdamage": 30
+            },
+            "1": {
+                "pdamage_indep": 120,
+                "armor_ignore": 20
+            }
+        },
+        "damage": 348,
+        "hit": 1,
+        "type": "DamageSkill"
+    },
+    "시그너스 팔랑크스": {
+        "cooltime": 30000,
+        "delay": 120,
+        "name": "시그너스 팔랑크스",
+        "red": true,
+        "rem": false,
+        "_static_skill_modifier": {},
+        "damage": 990,
+        "hit": 1,
+        "remain": 8400,
+        "summondelay": 600,
+        "type": "SummonSkill"
+    },
+    "아이들 윔": {
+        "cooltime": 10000,
+        "delay": 600,
+        "name": "아이들 윔",
+        "red": true,
+        "rem": false,
+        "_static_skill_modifier": {},
+        "damage": 852.5,
+        "hit": 30,
+        "type": "DamageSkill"
+    },
+    "아이들 윔(도트)": {
+        "cooltime": -1,
+        "delay": 1000,
+        "name": "아이들 윔(도트)",
+        "red": false,
+        "rem": false,
+        "_static_skill_modifier": {},
+        "damage": 1100,
+        "hit": 1,
+        "remain": 9000,
+        "summondelay": 0,
+        "type": "SummonSkill"
+    },
+    "가이디드 애로우": {
+        "cooltime": 60000,
+        "delay": 510,
+        "name": "가이디드 애로우",
+        "red": true,
+        "rem": false,
+        "_static_skill_modifier": {},
+        "damage": 880,
+        "hit": 1,
+        "remain": 45900,
+        "summondelay": 720,
+        "type": "SummonSkill"
+    },
+    "스파이더 인 미러(공간 붕괴)": {
+        "cooltime": 250000,
+        "delay": 720,
+        "name": "스파이더 인 미러(공간 붕괴)",
+        "red": true,
+        "rem": false,
+        "_static_skill_modifier": {},
+        "damage": 990,
+        "hit": 15,
+        "type": "DamageSkill"
+    },
+    "스파이더 인 미러(거울 속의 거미)": {
+        "cooltime": -1,
+        "delay": 900,
+        "name": "스파이더 인 미러(거울 속의 거미)",
+        "red": false,
+        "rem": false,
+        "_static_skill_modifier": {},
+        "damage": 385,
+        "hit": 8,
+        "remain": 50000,
+        "summondelay": 0,
+        "type": "SummonSkill"
+    },
+    "하울링 게일": {
+        "cooltime": 20000,
+        "delay": 150,
+        "name": "하울링 게일",
+        "red": false,
+        "rem": false,
+        "_static_skill_modifier": {},
+        "damage": 550,
+        "hit": 3,
+        "remain": 8699,
+        "summondelay": 630,
+        "type": "SummonSkill"
+    },
+    "윈드 월": {
+        "cooltime": 90000,
+        "delay": 2000,
+        "name": "윈드 월",
+        "red": true,
+        "rem": false,
+        "_static_skill_modifier": {
+            "pdamage_indep": -50
+        },
+        "damage": 1210,
+        "hit": 15,
+        "remain": 45000,
+        "summondelay": 720,
+        "type": "SummonSkill"
+    },
+    "볼텍스 스피어": {
+        "cooltime": 35000,
+        "delay": 180,
+        "name": "볼텍스 스피어",
+        "red": true,
+        "rem": false,
+        "_static_skill_modifier": {},
+        "damage": 880,
+        "hit": 6,
+        "remain": 3059,
+        "summondelay": 720,
+        "type": "SummonSkill"
+    },
+    "크리티컬 리인포스": {
+        "cooltime": 120000,
+        "delay": 600,
+        "name": "크리티컬 리인포스",
+        "red": true,
+        "rem": false,
+        "remain": 30000,
+        "type": "DamageSkill"
+    },
+    "시그너스 나이츠": {
+        "cooltime": 0,
+        "delay": 0,
+        "name": "시그너스 나이츠",
+        "red": false,
+        "rem": true,
+        "remain": 915000,
+        "type": "DamageSkill"
+    },
+    "쓸만한 컴뱃 오더스": {
+        "cooltime": 0,
+        "delay": 1500,
+        "name": "쓸만한 컴뱃 오더스",
+        "red": false,
+        "rem": false,
+        "remain": 183000,
+        "type": "DamageSkill"
+    },
+    "초월자 시그너스의 축복": {
+        "cooltime": 240000,
+        "delay": 480,
+        "name": "초월자 시그너스의 축복",
+        "red": true,
+        "rem": false,
+        "remain": 45000,
+        "type": "DamageSkill"
+    },
+    "소울 컨트랙트": {
+        "cooltime": 90000,
+        "delay": 900,
+        "name": "소울 컨트랙트",
+        "red": true,
+        "rem": true,
+        "remain": 10000,
+        "type": "DamageSkill"
+    }
+}

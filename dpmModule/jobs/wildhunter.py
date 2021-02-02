@@ -118,7 +118,7 @@ class JobGenerator(ck.JobGenerator):
         passive_level = chtr.get_base_modifier().passive_level + self.combat
 
         # Jaguar Skills
-        JAGUAR_STORM_HIT = 3
+        JAGUAR_STORM_HIT = 4
         
         Jaguar = JaguarWrapper()
         Normal = core.DamageSkill("재규어 평타", 0, 140+chtr.level, 1, modifier = core.CharacterModifier(pdamage = 20)).setV(vEhc, 1, 2, False).wrap(core.DamageSkillWrapper)

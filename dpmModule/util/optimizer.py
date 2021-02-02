@@ -70,7 +70,7 @@ def get_instant_dpm(
     useFullCore=True,
     koJobFlag=False,
     v_builder=None,
-    seed_rings=False,
+    seed_rings=False, #tower ring toggle
     weaponAtt=None,
 ):
     """주어진 값과 직업값으로부터 dpm을 계산해서 리턴합니다.
@@ -122,22 +122,22 @@ def get_instant_dpm(
     if seed_rings:
         seed_ring_specs = [
             {
-                "name": "리스크테이커",
+                "name": "리스크테이커", #risk taker
                 "effect": [[12000 + 6000 * i, MDF(patt=20 + 10 * i)] for i in range(4)],
             },
             {
-                "name": "리스트레인트",
+                "name": "리스트레인트", #ror
                 "effect": [[9000 + 2000 * i, MDF(patt=25 + 25 * i)] for i in range(4)],
             },
             {
-                "name": "웨폰퍼프",
+                "name": "웨폰퍼프", #wep jump
                 "effect": [
                     [9000 + 2000 * i, MDF(stat_main=weaponAtt * (i + 1))]
                     for i in range(4)
                 ],
             },
             {
-                "name": "크리데미지",
+                "name": "크리데미지", #crit damage
                 "effect": [
                     [9000 + 2000 * i, MDF(crit_damage=7 + 7 * i)] for i in range(4)
                 ],

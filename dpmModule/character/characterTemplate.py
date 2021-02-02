@@ -269,6 +269,11 @@ class TemplateGenerator:
                     for stat_key in scroll['option']:
                         stat[stat_type[stat_key]] = scroll['option'][stat_key]
                     gb.apply_scroll(Scroll.create_from_dict(stat), count)
+                elif type == "Gollux Scroll" or type == "Gollux":
+                    gb.apply_scroll(Scroll.create_from_dict({
+                        GearPropType.STR: 3, GearPropType.DEX: 3, GearPropType.INT: 3, GearPropType.LUK: 3,
+                        GearPropType.MHP: 0, GearPropType.att: 4, GearPropType.matt: 4
+                    }), count)
                 else:
                     raise TypeError('Invalid upgrade type: ' + type)
 

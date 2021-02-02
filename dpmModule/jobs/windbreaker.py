@@ -7,6 +7,7 @@ from .jobbranch import bowmen
 from .jobclass import cygnus
 from math import ceil
 from typing import Any, Dict
+from . import seedrings
 
 
 class JobGenerator(ck.JobGenerator):
@@ -113,7 +114,7 @@ class JobGenerator(ck.JobGenerator):
             "실프스 에이드", delay=0, remain=200 * 1000, att=20, crit=10, rem=True
         ).wrap(core.BuffSkillWrapper)
         Albatross = core.BuffSkill(
-            "알바트로스 맥시멈",
+            "Albatross",
             delay=0,
             remain=200 * 1000,
             att=50 + passive_level,
@@ -123,7 +124,7 @@ class JobGenerator(ck.JobGenerator):
             rem=True,
         ).wrap(core.BuffSkillWrapper)
         SharpEyes = core.BuffSkill(
-            "샤프 아이즈",
+            "Sharp Eyes",
             delay=660,
             remain=(300 + 10 * self.combat) * 1000,
             crit=20 + ceil(self.combat / 2),
@@ -131,7 +132,7 @@ class JobGenerator(ck.JobGenerator):
             rem=True,
         ).wrap(core.BuffSkillWrapper)
         GloryOfGuardians = core.BuffSkill(
-            name="글로리 오브 가디언즈",
+            name="Glory of Guardians",
             delay=0,
             remain=60 * 1000,
             cooltime=120 * 1000,
@@ -139,7 +140,7 @@ class JobGenerator(ck.JobGenerator):
         ).wrap(core.BuffSkillWrapper)
 
         StormBringerDummy = core.BuffSkill(
-            "스톰 브링어(버프)",
+            "Stormbringer (Buff)",
             delay=0,  # 딜레이 계산 필요
             remain=200 * 1000,
         ).wrap(core.BuffSkillWrapper)
@@ -149,7 +150,7 @@ class JobGenerator(ck.JobGenerator):
         advanced_proc = (20 + passive_level // 3) * 0.01
         TriflingWhim = (
             core.DamageSkill(
-                "트라이플링 윔",
+                "Trifling Wind",
                 delay=0,
                 damage=(290 + passive_level * 3) * (1 - advanced_proc)
                 + (390 + passive_level * 3) * advanced_proc,
@@ -160,21 +161,21 @@ class JobGenerator(ck.JobGenerator):
             .wrap(core.DamageSkillWrapper)
         )
         StormBringer = (
-            core.DamageSkill("스톰 브링어", delay=0, damage=500, hit=0.3)
+            core.DamageSkill("Stormbringer", delay=0, damage=500, hit=0.3)
             .setV(vEhc, 2, 2, True)
             .wrap(core.DamageSkillWrapper)
         )
 
         # 핀포인트 피어스
         PinPointPierce = core.DamageSkill(
-            "핀포인트 피어스",
+            "Pinpoint Pierce",
             delay=690,
             damage=340,
             hit=2,
             cooltime=30 * 1000,
         ).wrap(core.DamageSkillWrapper)
         PinPointPierceDebuff = core.BuffSkill(
-            "핀포인트 피어스(버프)",
+            "Pinpoint Pierce (Buff)",
             delay=0,
             remain=30 * 1000,
             cooltime=-1,
@@ -187,7 +188,7 @@ class JobGenerator(ck.JobGenerator):
         target_pdamage = ((120 + self.combat // 2) / 100) ** 3 * 100 - 100
         SongOfHeaven = (
             core.DamageSkill(
-                "천공의 노래",
+                "Song of Heaven", #천공의 노래
                 delay=120,
                 damage=345 + self.combat * 3,
                 hit=1,
@@ -273,6 +274,17 @@ class JobGenerator(ck.JobGenerator):
         CriticalReinforce = bowmen.CriticalReinforceWrapper(
             vEhc, chtr, 3, 3, 10 + 25 + passive_level // 2 + 20 + ceil(self.combat / 2)
         )  # 실프스 에이드 + 알바트로스 맥시멈 + 샤프 아이즈
+        #genesis skill add
+        
+        TanadianRuin, AeonianRise=globalSkill.GenesisSkillBuilder()
+
+        #genesis skill end
+
+        #risk taker add
+        
+        #RiskTaker=seedrings.risktaker_ring(4)
+        RoR=seedrings.restraint_ring(4)
+        #risk taker end
 
         # Damage
         SongOfHeaven.onAfters([TriflingWhim, StormBringer])
@@ -300,6 +312,7 @@ class JobGenerator(ck.JobGenerator):
                 cygnus.CygnusBlessWrapper(vEhc, 0, 0, chtr.level),
                 GloryOfGuardians,
                 CriticalReinforce,
+                #RoR,
                 globalSkill.soul_contract(),
             ]
             + [
