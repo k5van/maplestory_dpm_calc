@@ -11,7 +11,11 @@ import argparse
 def get_args():
     parser = argparse.ArgumentParser("DPM Full Test argument")
     parser.add_argument(
+<<<<<<< HEAD
         "--ulevel", nargs="+", type=int, default=[4500, 5000, 6000, 7000, 8000, 8500, 9000]
+=======
+        "--ulevel", nargs="+", type=int, default=[4500, 6000, 7000, 8000, 8500]
+>>>>>>> 9ae38c05a1b5d6db876233f998904acedd6bcce4
     )
     parser.add_argument("--time", type=int, default=1800)
     parser.add_argument("--cdr", type=int, default=0)
